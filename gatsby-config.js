@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Squid's blog`,
+    slogan: `Learning Gatsby!`,
+    description: `This thoughts are my own. Thank you for reading!`,
+    author: `@luisquid`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
@@ -13,8 +14,11 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+        name: 'markdownFiles',
+        path: `${__dirname}/content`
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -30,6 +34,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options:{
+        pathToConfigModule: './src/utils/typography.js'
+      }
+    }
+    ,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

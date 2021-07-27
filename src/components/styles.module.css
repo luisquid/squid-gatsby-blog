@@ -1,0 +1,21 @@
+.header  {
+    background: #36648B;
+    margin-bottom: 1.45em;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    text-shadow: none;
+    background: none;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
